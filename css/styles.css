@@ -67,7 +67,8 @@ button{
 }
 .header-nav{
 display: flex;
-gap: 76px;
+align-items: center;
+
 
 }
 .header-list{
@@ -77,10 +78,10 @@ gap: 76px;
 }
 .header{
     background-color: var(--primary-background-color);
+    border-bottom: 1px solid #e7e9fc
 }
 .header-link{
-    padding: 25px 0;
-    margin-right;
+    padding: 24px 0;
     font-family: var(--primary-font);
     font-style: normal;
     font-weight: 500;
@@ -103,7 +104,7 @@ gap: 76px;
     margin-left: auto;
 }
 .header-contact{
-    padding: 25px 0;
+    padding: 24px 0;
     font-family: var(--primary-font);
     font-style: normal;
     font-weight: 400;
@@ -118,8 +119,7 @@ gap: 76px;
     color: var(--accent-color);
 }
 .logo-link{
-    padding: 25px 0;
-    margin-right: 76 px;
+    margin-right: 76px;
     font-family: var(--secondary-font);
     font-style: normal;
     font-weight: 800;
@@ -143,13 +143,11 @@ gap: 76px;
 /*head styles*/
  .head{
 background-color: var(--dark-background-color);
- }
-.head-container{
-    padding-bottom: 188px;
+padding-bottom: 188px;
     padding-top: 188px;
-}
+ }
  .title{
-        max-width: 497px;
+        max-width: 496px;
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 48px;
@@ -164,6 +162,7 @@ background-color: var(--dark-background-color);
         color: var(--text-white-color);
  }
  .button{
+    border: none;
     display: block;
     margin-left: auto;
         margin-right: auto;
@@ -192,7 +191,7 @@ background-color: var(--accent-color);
  .features-hidden-title{
    visibility: hidden;
  }
-.features-container{
+.features{
     padding-top: 120px;
     padding-bottom: 120px;
 }
@@ -212,6 +211,7 @@ background-color: var(--accent-color);
         line-height: 1.2;
         letter-spacing: 0.02em;
         color: var(--primary-text-color);
+        margin-bottom: 8px;
  }
  .features-pharmacy{
     font-family: var(--primary-font);
@@ -223,7 +223,7 @@ background-color: var(--accent-color);
  }
 
  /*employment styles*/
-.employment-container{
+.employment{
     padding-bottom: 120px;
 }
  .employment-title{
@@ -251,7 +251,7 @@ background-color: var(--accent-color);
  }
 
  /*team styles*/
-.team-container{
+.team{
     padding-top: 120px ;
     padding-bottom: 120px;
 }
@@ -307,12 +307,10 @@ background-color: var(--accent-color);
  }
  .footer{
     background-color: var(--dark-background-color);
-
- }
- .footer-container{
     padding-top: 100px;
     padding-bottom: 100px;
  }
+ 
  .footer-lg{
     font-family: var(--secondary-font);
         font-style: normal;
@@ -335,6 +333,16 @@ font-family: 'Roboto';
  }
 
  /* portfolio styles */
+ .portfolio-section{
+    padding-top: 96px;
+    padding-bottom: 120px;
+ }
+ .portfolio-button-list{
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 72px;
+ }
  .portfolio-main-title{
     visibility: hidden;
  }
@@ -348,11 +356,29 @@ font-family: 'Roboto';
         letter-spacing: 0.04em;
         background-color: var(--secondary-background-color);
         color: var(--button-color);
+        padding: 12px 24px;
+        border: 1px solid #e7e9fc;
+        border-radius: 4px;
 }
 .portfolio-button:hover,
 .portfolio-button:focus{
 color: var(--text-white-color);
 background: var(--accent-color);
+border: 1px solid transparent;
+}
+.list-projekt{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 48px;
+}
+.item-projekt{
+  width:calc((100% - 48px) \ 3); 
+}
+.project-description{
+    padding: 32px 16px;
+    border-top: none;
+    border: 1px solid #e7e9fc;
 }
    .portfolio-title{
         font-family: var(--primary-font);
@@ -362,6 +388,7 @@ background: var(--accent-color);
         line-height: 1.2;
         letter-spacing: 0.02em;
         color: var(--primary-text-color);
+        margin-bottom: 8px;
 
    } 
    .portfolio-category{
